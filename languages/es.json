@@ -5,6 +5,8 @@
     "bossbar.settings.currentHpPath.hint":"Dirección de datos a los PG actuales de un actor.",
     "bossbar.settings.maxHpPath.name":"Dirección de PG Max.",
     "bossbar.settings.maxHpPath.hint":"Dirección de datos a los PG max. de un actor.",
+    "bossbar.settings.invert.name":"Invert Bar (TRANSLATION NEEDED)",
+    "bossbar.settings.invert.hint":"For games where health counts up.",
     "bossbar.settings.barHeight.name":"Altura de barra de jefe.",
     "bossbar.settings.barHeight.hint":"Altura de la barra de jefe en píxeles.",
     "bossbar.settings.backgroundPath.name":"Imagen de fondo.",

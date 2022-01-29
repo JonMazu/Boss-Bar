@@ -5,6 +5,8 @@
     "bossbar.settings.currentHpPath.hint":"Data path to the current hp of an actor",
     "bossbar.settings.maxHpPath.name":"Max HP Path",
     "bossbar.settings.maxHpPath.hint":"Data path to the max hp of an actor",
+    "bossbar.settings.invert.name":"Invert Bar",
+    "bossbar.settings.invert.hint":"For games where health counts up.",
     "bossbar.settings.barHeight.name":"Boss Bar Height",
     "bossbar.settings.barHeight.hint":"Height of the boss bar in pixels",
     "bossbar.settings.backgroundPath.name":"Background Image",
@@ -24,5 +26,23 @@
     "bossbar.settings.position.opt1":"Bottom (above webcams)",
     "bossbar.settings.position.opt2":"Bottom (below webcams)",
     "bossbar.settings.position.opt3":"In player List",
-    "bossbar.settings.position.opt4":"Bottom (above hotbar)"
+    "bossbar.settings.position.opt4":"Bottom (above hotbar)",
+    "bossbar.settings.borderStyle.name":"Foreground Border",
+    "bossbar.settings.borderStyle.hint":"Sets the border for the Foreground bar. https://www.w3schools.com/css/css_border.asp ",
+    "bossbar.settings.borderColor.name":"Foreground Border Color",
+    "bossbar.settings.borderColor.hint":"Sets the color for the Foreground bar border.",
+    "bossbar.settings.borderSecColor.name":"Foreground Border 2nd Color",
+    "bossbar.settings.borderSecColor.hint":"If Double is selected. This is the its second color.",
+    "bossbar.settings.backBorderSecColor.name":"Background Border 2nd Color",
+    "bossbar.settings.backBordersecColor.hint":"If Double is selected. This is the its second color.",
+    "bossbar.settings.backBorderStyle.name":"Background Border",
+    "bossbar.settings.backBorderStyle.hint":"Sets the border for the Background bar. https://www.w3schools.com/css/css_border.asp",
+    "bossbar.settings.backBorderColor.name":"Background Border Color",
+    "bossbar.settings.backBorderColor.hint":"Sets the color for the Background bar border.",
+    "bossbar.settings.borderSize.name":"Border Size",
+    "bossbar.settings.borderSize.hint":"Sets How large the border is. Size is in Pixels.",
+    "bossbar.settings.borderRadius.name":"Border Radius",
+    "bossbar.settings.borderRadius.hint":"Sets how rounded the corners are. Size in Pixels."
+
+
 }

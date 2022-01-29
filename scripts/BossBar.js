@@ -7,6 +7,13 @@ class BossBar {
     this.tempBarColor = game.settings.get("bossbar", "tempBarColor");
     this.textSize = game.settings.get("bossbar", "textSize");
     this.position = game.settings.get("bossbar", "position");
+    this.invert = game.settings.get("bossbar", "invert");
+    this.borderStyle = game.settings.get("bossbar", "borderStyle");
+    this.borderSize = game.settings.get("bossbar","borderSize");
+    this.backBorderStyle = game.settings.get("bossbar", "backBorderStyle");
+    this.foregroundColorOne = game.settings.get("bossbar", "foreBorderColorOne");
+    this.backgroundColorOne = game.settings.get("bossbar", "backBorderColorOne");
+    this.borderRadius = game.settings.get("bossbar", "borderRadius");
   }
 
   static async create(token, render = true) {
@@ -53,17 +60,17 @@ class BossBar {
         this.id
       }" class="bossBarMax" style="background-image:url('${
       this.bgPath
-    }');height:${h}px;"></div>
+    }');height:${h}px;border-style:${this.backBorderStyle};border-width:${this.borderSize}px;border-color:${this.backgroundColorOne};border-radius:${this.borderRadius}px "></div>
       <div id="bossBarTemp-${
         this.id
       }" class="bossBarTemp" style="background-color:${
       this.tempBarColor
-    };height:${h}px;width:${this.hpPercent}%"></div>
+    };height:${h}px;width:${this.hpPercent}%;border-radius:${this.borderRadius}px"></div>
       <div id="bossBarCurrent-${
         this.id
       }" class="bossBarCurrent" style="background-image:url('${
       this.fgPath
-    }');height:${h}px;width:${this.hpPercent}%"></div>
+    }');height:${h}px;width:${this.hpPercent}%;border-style:${this.borderStyle};border-width:${this.borderSize}px;border-color:${this.foregroundColorOne};border-radius:${this.borderRadius}px"></div>
     </div>
   </div>
   <div style="flex-basis: 100%;height: ${
@@ -200,6 +207,9 @@ class BossBar {
   }
 
   get hpPercent() {
+    if(this.invert){
+      return Math.round((100 * (this.maxHp-this.currentHp)) / this.maxHp);
+    }
     return Math.round((100 * this.currentHp) / this.maxHp);
   }
 

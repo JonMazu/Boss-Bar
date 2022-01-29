@@ -17,6 +17,16 @@ Hooks.once("ready", function () {
     default: "data.attributes.hp.max",
   });
 
+  game.settings.register("bossbar", "invert", {
+    name: game.i18n.localize("bossbar.settings.invert.name"),
+    hint: game.i18n.localize("bossbar.settings.invert.hint"),
+    scope: "world",
+    config: true,
+    type: Boolean,
+    default: false,
+  });
+
+
   game.settings.register("bossbar", "barHeight", {
     name: game.i18n.localize("bossbar.settings.barHeight.name"),
     hint: game.i18n.localize("bossbar.settings.barHeight.hint"),
@@ -80,6 +90,41 @@ Hooks.once("ready", function () {
     filePicker: true,
   });
 
+  game.settings.register("bossbar", "borderSize", {
+    name: game.i18n.localize("bossbar.settings.borderSize.name"),
+    hint: game.i18n.localize("bossbar.settings.borderSize.hint"),
+    scope: "world",
+    config: true,
+    type: Number,
+    default: 1,
+  });
+  game.settings.register("bossbar", "borderRadius", {
+    name: game.i18n.localize("bossbar.settings.borderSize.name"),
+    hint: game.i18n.localize("bossbar.settings.borderSize.hint"),
+    scope: "world",
+    config: true,
+    type: Number,
+    default: 0,
+  });
+
+  game.settings.register("bossbar", "borderStyle", {
+    name: game.i18n.localize("bossbar.settings.borderStyle.name"),
+    hint: game.i18n.localize("bossbar.settings.borderStyle.hint"),
+    scope: "world",
+    config: true,
+    type: String,
+    default: "None",
+  });
+
+  game.settings.register("bossbar", "backBorderStyle", {
+    name: game.i18n.localize("bossbar.settings.backBorderStyle.name"),
+    hint: game.i18n.localize("bossbar.settings.backBorderStyle.hint"),
+    scope: "world",
+    config: true,
+    type: String,
+    default: "None",
+  });
+  
   new window.Ardittristan.ColorSetting("bossbar", "tempBarColor", {
     name: game.i18n.localize("bossbar.settings.tempBarColor.name"),
     hint: game.i18n.localize("bossbar.settings.tempBarColor.hint"),
@@ -88,6 +133,28 @@ Hooks.once("ready", function () {
     defaultColor: "#7e7e7e",
     scope: "world",
   });
+
+  new window.Ardittristan.ColorSetting("bossbar", "foreBorderColorOne", {
+    name: game.i18n.localize("bossbar.settings.borderColor.name"),
+    hint: game.i18n.localize("bossbar.settings.borderColor.name"),
+    label: game.i18n.localize("bossbar.settings.tempBarColor.label"),
+    restricted: true,
+    defaultColor: "#000000ff",
+    scope: "world",
+  });
+
+
+  new window.Ardittristan.ColorSetting("bossbar", "backBorderColorOne", {
+    name: game.i18n.localize("bossbar.settings.backBorderColor.name"),
+    hint: game.i18n.localize("bossbar.settings.backBorderColor.hint"),
+    label: game.i18n.localize("bossbar.settings.tempBarColor.label"),
+    restricted: true,
+    defaultColor: "#000000ff",
+    scope: "world",
+  });
+
+
+ 
 
   Hooks.on("renderApplication", (app) => {
     if (app.id == "controls" || app.id =="navigation" || app.id == "camera-views") {
